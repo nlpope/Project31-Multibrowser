@@ -6,13 +6,16 @@ import UIKit
 import AVKit
 import AVFoundation
 
-class HomeVC: UIViewController {
+class HomeVC: UIViewController
+{
 
     var logoLauncher: MBLogoLauncher!
     var player = AVPlayer()
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
+    
+    deinit { logoLauncher.removeAllAVPlayerLayers() }
 }
