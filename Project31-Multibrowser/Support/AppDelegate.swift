@@ -76,3 +76,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+//-------------------------------------//
+// MARK: - NOTES SECTION
+/**
+ swift @ version: 6 (released 09.17.2024)
+ xcode @ version: 16.3 (released 03.31.2025)
+ --------------------------
+ XXXXXXXXXXXXXXXXXXXXXXXX
+ --------------------------
+ PROBLEM TRACKING:
+ * problem
+ >  sltn
+ 
+ --------------------------
+ TECHNOLOGIES USED / LEARNED:
+ * Swift
+ 
+ --------------------------
+ REFERENCES & CREDITS:
+ *
+ 
+ --------------------------
+ XXXXXXXXXXXXXXXXXXXXXXXX
+ --------------------------
+ */

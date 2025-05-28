@@ -6,6 +6,25 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		408C2C192DE76C3F00A07EC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C2C0D2DE76C3F00A07EC4 /* AppDelegate.swift */; };
+		408C2C1A2DE76C3F00A07EC4 /* Project31_Multibrowser.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 408C2C142DE76C3F00A07EC4 /* Project31_Multibrowser.xcdatamodeld */; };
+		408C2C1B2DE76C3F00A07EC4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C2C152DE76C3F00A07EC4 /* SceneDelegate.swift */; };
+		408C2C1C2DE76C3F00A07EC4 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C2C162DE76C3F00A07EC4 /* HomeVC.swift */; };
+		408C2C1D2DE76C3F00A07EC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 408C2C0E2DE76C3F00A07EC4 /* Assets.xcassets */; };
+		408C2C1F2DE76C3F00A07EC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 408C2C112DE76C3F00A07EC4 /* LaunchScreen.storyboard */; };
+		408C2C202DE76C3F00A07EC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 408C2C132DE76C3F00A07EC4 /* Main.storyboard */; };
+		408C2C242DE76D1C00A07EC4 /* MBLogoLauncher+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C2C232DE76D1C00A07EC4 /* MBLogoLauncher+Utils.swift */; };
+		408C2C282DE76E6C00A07EC4 /* launchscreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 408C2C272DE76E6C00A07EC4 /* launchscreen.mp4 */; };
+		408C2C2B2DE76F6400A07EC4 /* Constants+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C2C2A2DE76F6300A07EC4 /* Constants+Utils.swift */; };
+		408C2C2C2DE76F6400A07EC4 /* Constants+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C2C2A2DE76F6300A07EC4 /* Constants+Utils.swift */; };
+		408C2C322DE7700100A07EC4 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C2C302DE7700100A07EC4 /* KeychainItemAccessibility.swift */; };
+		408C2C332DE7700100A07EC4 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C2C312DE7700100A07EC4 /* KeychainWrapper.swift */; };
+		408C2C352DE7703500A07EC4 /* AVPlayer+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408C2C342DE7703500A07EC4 /* AVPlayer+Ext.swift */; };
+		4090D2822DE77458004FBCBE /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4090D2812DE77458004FBCBE /* PersistenceManager.swift */; };
+		4090D2842DE777F3004FBCBE /* UIAlertController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4090D2832DE777F3004FBCBE /* UIAlertController+Ext.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		408C2BF02DE76BE500A07EC4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,27 +46,25 @@
 		408C2BD62DE76BE100A07EC4 /* Project31-Multibrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project31-Multibrowser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		408C2BEF2DE76BE500A07EC4 /* Project31-MultibrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Project31-MultibrowserTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		408C2BF92DE76BE500A07EC4 /* Project31-MultibrowserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Project31-MultibrowserUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		408C2C0D2DE76C3F00A07EC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		408C2C0E2DE76C3F00A07EC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		408C2C0F2DE76C3F00A07EC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		408C2C102DE76C3F00A07EC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		408C2C122DE76C3F00A07EC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		408C2C152DE76C3F00A07EC4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		408C2C162DE76C3F00A07EC4 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		408C2C182DE76C3F00A07EC4 /* Project31_Multibrowser.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Project31_Multibrowser.xcdatamodel; sourceTree = "<group>"; };
+		408C2C232DE76D1C00A07EC4 /* MBLogoLauncher+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MBLogoLauncher+Utils.swift"; sourceTree = "<group>"; };
+		408C2C272DE76E6C00A07EC4 /* launchscreen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = launchscreen.mp4; sourceTree = "<group>"; };
+		408C2C2A2DE76F6300A07EC4 /* Constants+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+Utils.swift"; sourceTree = "<group>"; };
+		408C2C302DE7700100A07EC4 /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainItemAccessibility.swift; sourceTree = "<group>"; };
+		408C2C312DE7700100A07EC4 /* KeychainWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
+		408C2C342DE7703500A07EC4 /* AVPlayer+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVPlayer+Ext.swift"; sourceTree = "<group>"; };
+		4090D2812DE77458004FBCBE /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		4090D2832DE777F3004FBCBE /* UIAlertController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		408C2C012DE76BE500A07EC4 /* Exceptions for "Project31-Multibrowser" folder in "Project31-Multibrowser" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 408C2BD52DE76BE100A07EC4 /* Project31-Multibrowser */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		408C2BD82DE76BE100A07EC4 /* Project31-Multibrowser */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				408C2C012DE76BE500A07EC4 /* Exceptions for "Project31-Multibrowser" folder in "Project31-Multibrowser" target */,
-			);
-			path = "Project31-Multibrowser";
-			sourceTree = "<group>";
-		};
 		408C2BF22DE76BE500A07EC4 /* Project31-MultibrowserTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Project31-MultibrowserTests";
@@ -88,7 +105,7 @@
 		408C2BCD2DE76BE100A07EC4 = {
 			isa = PBXGroup;
 			children = (
-				408C2BD82DE76BE100A07EC4 /* Project31-Multibrowser */,
+				408C2C172DE76C3F00A07EC4 /* Project31-Multibrowser */,
 				408C2BF22DE76BE500A07EC4 /* Project31-MultibrowserTests */,
 				408C2BFC2DE76BE500A07EC4 /* Project31-MultibrowserUITests */,
 				408C2BD72DE76BE100A07EC4 /* Products */,
@@ -105,6 +122,69 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		408C2C172DE76C3F00A07EC4 /* Project31-Multibrowser */ = {
+			isa = PBXGroup;
+			children = (
+				408C2C262DE76DF500A07EC4 /* Extensions */,
+				408C2C362DE7714500A07EC4 /* Managers */,
+				408C2C292DE76E8400A07EC4 /* Utilities */,
+				408C2C222DE76C5B00A07EC4 /* Screens */,
+				408C2C212DE76C4A00A07EC4 /* Support */,
+				408C2C0F2DE76C3F00A07EC4 /* Info.plist */,
+			);
+			path = "Project31-Multibrowser";
+			sourceTree = "<group>";
+		};
+		408C2C212DE76C4A00A07EC4 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				408C2C0D2DE76C3F00A07EC4 /* AppDelegate.swift */,
+				408C2C152DE76C3F00A07EC4 /* SceneDelegate.swift */,
+				408C2C302DE7700100A07EC4 /* KeychainItemAccessibility.swift */,
+				408C2C312DE7700100A07EC4 /* KeychainWrapper.swift */,
+				408C2C0E2DE76C3F00A07EC4 /* Assets.xcassets */,
+				408C2C272DE76E6C00A07EC4 /* launchscreen.mp4 */,
+				408C2C112DE76C3F00A07EC4 /* LaunchScreen.storyboard */,
+				408C2C132DE76C3F00A07EC4 /* Main.storyboard */,
+				408C2C142DE76C3F00A07EC4 /* Project31_Multibrowser.xcdatamodeld */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		408C2C222DE76C5B00A07EC4 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				408C2C162DE76C3F00A07EC4 /* HomeVC.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		408C2C262DE76DF500A07EC4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				408C2C342DE7703500A07EC4 /* AVPlayer+Ext.swift */,
+				4090D2832DE777F3004FBCBE /* UIAlertController+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		408C2C292DE76E8400A07EC4 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				408C2C232DE76D1C00A07EC4 /* MBLogoLauncher+Utils.swift */,
+				408C2C2A2DE76F6300A07EC4 /* Constants+Utils.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		408C2C362DE7714500A07EC4 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				4090D2812DE77458004FBCBE /* PersistenceManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +199,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				408C2BD82DE76BE100A07EC4 /* Project31-Multibrowser */,
 			);
 			name = "Project31-Multibrowser";
 			packageProductDependencies = (
@@ -225,6 +302,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				408C2C1D2DE76C3F00A07EC4 /* Assets.xcassets in Resources */,
+				408C2C1F2DE76C3F00A07EC4 /* LaunchScreen.storyboard in Resources */,
+				408C2C282DE76E6C00A07EC4 /* launchscreen.mp4 in Resources */,
+				408C2C202DE76C3F00A07EC4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +330,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				408C2C192DE76C3F00A07EC4 /* AppDelegate.swift in Sources */,
+				4090D2822DE77458004FBCBE /* PersistenceManager.swift in Sources */,
+				408C2C322DE7700100A07EC4 /* KeychainItemAccessibility.swift in Sources */,
+				408C2C332DE7700100A07EC4 /* KeychainWrapper.swift in Sources */,
+				408C2C2C2DE76F6400A07EC4 /* Constants+Utils.swift in Sources */,
+				408C2C1A2DE76C3F00A07EC4 /* Project31_Multibrowser.xcdatamodeld in Sources */,
+				408C2C242DE76D1C00A07EC4 /* MBLogoLauncher+Utils.swift in Sources */,
+				408C2C1B2DE76C3F00A07EC4 /* SceneDelegate.swift in Sources */,
+				408C2C352DE7703500A07EC4 /* AVPlayer+Ext.swift in Sources */,
+				408C2C1C2DE76C3F00A07EC4 /* HomeVC.swift in Sources */,
+				4090D2842DE777F3004FBCBE /* UIAlertController+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +348,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				408C2C2B2DE76F6400A07EC4 /* Constants+Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +374,25 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		408C2C112DE76C3F00A07EC4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				408C2C102DE76C3F00A07EC4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		408C2C132DE76C3F00A07EC4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				408C2C122DE76C3F00A07EC4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		408C2C032DE76BE500A07EC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -295,8 +407,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,8 +434,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -571,6 +681,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		408C2C142DE76C3F00A07EC4 /* Project31_Multibrowser.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				408C2C182DE76C3F00A07EC4 /* Project31_Multibrowser.xcdatamodel */,
+			);
+			currentVersion = 408C2C182DE76C3F00A07EC4 /* Project31_Multibrowser.xcdatamodel */;
+			path = Project31_Multibrowser.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 408C2BCE2DE76BE100A07EC4 /* Project object */;
 }
