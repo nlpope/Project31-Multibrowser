@@ -26,6 +26,8 @@ class HomeVC: UIViewController, WKNavigationDelegate, UITextFieldDelegate, UIGes
     
     deinit { logoLauncher.removeAllAVPlayerLayers() }
     
+    //-------------------------------------//
+    // MARK: - NAVIGATION SETUP
     
     func setDefaultTitle() { title = "Multibrowser" }
     
@@ -37,6 +39,8 @@ class HomeVC: UIViewController, WKNavigationDelegate, UITextFieldDelegate, UIGes
         navigationItem.rightBarButtonItems = [delete, add]
     }
     
+    //-------------------------------------//
+    // MARK: - WEBVIEW ADDITION / SUBTRACTION
     
     @objc func addWebView()
     {
@@ -61,12 +65,14 @@ class HomeVC: UIViewController, WKNavigationDelegate, UITextFieldDelegate, UIGes
         
     }
     
+    //-------------------------------------//
+    // MARK: - WEBVIEW SELECTION
     
-    func selectWebView(_ webView: WKWebView)
+    // don't understand how this is accessed || why it's here
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer,
+                           shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool
     {
-        for view in hStackView.arrangedSubviews { view.layer.borderWidth = 0 }
-        activeWebView = webView
-        webView.layer.borderWidth = 3
+        return true
     }
     
     
@@ -78,9 +84,22 @@ class HomeVC: UIViewController, WKNavigationDelegate, UITextFieldDelegate, UIGes
     }
     
     
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer,
-                           shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool
+    func selectWebView(_ webView: WKWebView)
     {
+        for view in hStackView.arrangedSubviews { view.layer.borderWidth = 0 }
+        activeWebView = webView
+        webView.layer.borderWidth = 3
+    }
+    
+    
+    // don't understand how this is accessed || why it's here
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        if let webView = activeWebView, let address = addressBar.text {
+            if let url = URL(string: address) { webView.load(URLRequest(url: url)) }
+        }
+        
+        textField.resignFirstResponder()
         return true
     }
 }
