@@ -20,6 +20,9 @@
                                 <rect key="frame" x="5" y="75" width="758" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="KI6-OO-SKA"/>
+                                </connections>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="5tv-nN-343">
                                 <rect key="frame" x="0.0" y="114" width="768" height="910"/>
@@ -39,6 +42,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qiF-gK-jdh"/>
+                    <connections>
+                        <outlet property="addressBar" destination="xVd-yR-Ck2" id="8nM-Hw-1ff"/>
+                        <outlet property="hStackView" destination="5tv-nN-343" id="dIJ-Uy-88s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
