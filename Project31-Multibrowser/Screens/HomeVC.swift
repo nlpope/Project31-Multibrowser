@@ -48,7 +48,7 @@ class HomeVC: UIViewController, WKNavigationDelegate, UITextFieldDelegate, UIGes
         webView.navigationDelegate = self
         
         hStackView.addArrangedSubview(webView)
-        let url = URL(string: "https://www.hackingwithswift.com")!
+        let url = URL(string: "https://www.github.com/nlpope")!
         webView.load(URLRequest(url: url))
         
         webView.layer.borderColor = UIColor.blue.cgColor
@@ -62,7 +62,20 @@ class HomeVC: UIViewController, WKNavigationDelegate, UITextFieldDelegate, UIGes
     
     @objc func deleteWebView()
     {
+        guard let webView = activeWebView else { return }
+        guard let index = hStackView.arrangedSubviews.firstIndex(of: webView) else { return }
         
+        webView.removeFromSuperview()
+        if hStackView.arrangedSubviews.count == 0 { setDefaultTitle() }
+        else {
+            var currentIndex = Int(index)
+            if currentIndex == hStackView.arrangedSubviews.count {
+                currentIndex = hStackView.arrangedSubviews.count - 1
+            }
+            if let newSelectedWebView = hStackView.arrangedSubviews[currentIndex] as? WKWebView {
+                selectWebView(newSelectedWebView)
+            }
+        }
     }
     
     //-------------------------------------//
@@ -91,6 +104,8 @@ class HomeVC: UIViewController, WKNavigationDelegate, UITextFieldDelegate, UIGes
         webView.layer.borderWidth = 3
     }
     
+    //-------------------------------------//
+    // MARK: - TEXTFIELD DELEGATE METHODS
     
     // don't understand how this is accessed || why it's here
     func textFieldShouldReturn(_ textField: UITextField) -> Bool
