@@ -118,8 +118,17 @@ class HomeVC: UIViewController, WKNavigationDelegate, UITextFieldDelegate, UIGes
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool
     {
-        if let webView = activeWebView, let address = addressBar.text {
-            if let url = URL(string: address) { webView.load(URLRequest(url: url)) }
+        if let webView = activeWebView, let rawAddress = addressBar.text {
+            var finalAddress = ""
+            
+            if rawAddress.contains(".com") {
+                let addressWithoutHttp = rawAddress.replacingOccurrences(of: "https://", with: "")
+                finalAddress = "https://" + addressWithoutHttp
+            } else {
+                finalAddress = "https://www.google.com/search?q=\(rawAddress)"
+            }
+            
+            if let url = URL(string: finalAddress) { webView.load(URLRequest(url: url)) }
         }
         
         textField.resignFirstResponder()
