@@ -10,7 +10,7 @@ import WebKit
 class HomeVC: UIViewController, WKNavigationDelegate, UITextFieldDelegate, UIGestureRecognizerDelegate
 {
     @IBOutlet var addressBar: UITextField!
-    @IBOutlet var hStackView: UIStackView!
+    @IBOutlet var stackView: UIStackView!
     var logoLauncher: MBLogoLauncher!
     var player = AVPlayer()
     weak var activeWebView: WKWebView?
@@ -47,7 +47,7 @@ class HomeVC: UIViewController, WKNavigationDelegate, UITextFieldDelegate, UIGes
         let webView = WKWebView()
         webView.navigationDelegate = self
         
-        hStackView.addArrangedSubview(webView)
+        stackView.addArrangedSubview(webView)
         let url = URL(string: "https://www.github.com/nlpope")!
         webView.load(URLRequest(url: url))
         
@@ -63,16 +63,16 @@ class HomeVC: UIViewController, WKNavigationDelegate, UITextFieldDelegate, UIGes
     @objc func deleteWebView()
     {
         guard let webView = activeWebView else { return }
-        guard let index = hStackView.arrangedSubviews.firstIndex(of: webView) else { return }
+        guard let index = stackView.arrangedSubviews.firstIndex(of: webView) else { return }
         
         webView.removeFromSuperview()
-        if hStackView.arrangedSubviews.count == 0 { setDefaultTitle() }
+        if stackView.arrangedSubviews.count == 0 { setDefaultTitle() }
         else {
             var currentIndex = Int(index)
-            if currentIndex == hStackView.arrangedSubviews.count {
-                currentIndex = hStackView.arrangedSubviews.count - 1
+            if currentIndex == stackView.arrangedSubviews.count {
+                currentIndex = stackView.arrangedSubviews.count - 1
             }
-            if let newSelectedWebView = hStackView.arrangedSubviews[currentIndex] as? WKWebView {
+            if let newSelectedWebView = stackView.arrangedSubviews[currentIndex] as? WKWebView {
                 selectWebView(newSelectedWebView)
             }
         }
@@ -81,7 +81,6 @@ class HomeVC: UIViewController, WKNavigationDelegate, UITextFieldDelegate, UIGes
     //-------------------------------------//
     // MARK: - WEBVIEW SELECTION
     
-    // don't understand how this is accessed || why it's here
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer,
                            shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool
     {
@@ -99,7 +98,7 @@ class HomeVC: UIViewController, WKNavigationDelegate, UITextFieldDelegate, UIGes
     
     func selectWebView(_ webView: WKWebView)
     {
-        for view in hStackView.arrangedSubviews { view.layer.borderWidth = 0 }
+        for view in stackView.arrangedSubviews { view.layer.borderWidth = 0 }
         activeWebView = webView
         webView.layer.borderWidth = 3
     }
@@ -107,7 +106,6 @@ class HomeVC: UIViewController, WKNavigationDelegate, UITextFieldDelegate, UIGes
     //-------------------------------------//
     // MARK: - TEXTFIELD DELEGATE METHODS
     
-    // don't understand how this is accessed || why it's here
     func textFieldShouldReturn(_ textField: UITextField) -> Bool
     {
         if let webView = activeWebView, let address = addressBar.text {
@@ -116,5 +114,14 @@ class HomeVC: UIViewController, WKNavigationDelegate, UITextFieldDelegate, UIGes
         
         textField.resignFirstResponder()
         return true
+    }
+    
+    //-------------------------------------//
+    // MARK: - SPLIT SCREEN BEHAVIOR (HORIZONTAL VS VERTICAL STACKING)
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?)
+    {
+        if traitCollection.horizontalSizeClass == .compact { stackView.axis = .vertical }
+        else { stackView.axis = .horizontal }
     }
 }

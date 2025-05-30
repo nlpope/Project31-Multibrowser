@@ -90,6 +90,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
  * prob: kept getting error when attempting to create a webview
  >  sltn: turns out the url was misspelled
  
+ * don't understand how this is accessed || why it's here:
+ func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer,
+                        shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool
+ {
+     return true
+ }
+ > sltn: this was an inherited feature from the UIGestureRecognizerDelegate (you're used to seeing 'override' in front of these in
+ tableViews. Not sure why 'override'  isn't present but its triggered automatically.
+ > same goes for this: func textFieldShouldReturn(_ textField: UITextField) -> Bool. It comes from the UITextFieldDelegate
+ 
  --------------------------
  TECHNOLOGIES USED / LEARNED:
  * Swift
