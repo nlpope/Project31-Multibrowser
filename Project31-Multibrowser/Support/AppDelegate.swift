@@ -91,8 +91,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
  >  sltn: turns out the url was misspelled
  
  * don't understand how this is accessed || why it's here:
- func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer,
-                        shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool
+ func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool
  {
      return true
  }
@@ -103,6 +102,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
  --------------------------
  TECHNOLOGIES USED / LEARNED:
  * Swift
+ * Xcode
  
  --------------------------
  REFERENCES & CREDITS:

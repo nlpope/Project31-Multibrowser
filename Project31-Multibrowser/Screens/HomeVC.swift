@@ -79,12 +79,18 @@ class HomeVC: UIViewController, WKNavigationDelegate, UITextFieldDelegate, UIGes
     }
     
     //-------------------------------------//
-    // MARK: - WEBVIEW SELECTION
+    // MARK: - WEBVIEW SELECTION & Delegate Methods
     
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer,
                            shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool
     {
         return true
+    }
+    
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!)
+    {
+        if webView == activeWebView { updateUI(for: webView) }
     }
     
     
@@ -101,7 +107,11 @@ class HomeVC: UIViewController, WKNavigationDelegate, UITextFieldDelegate, UIGes
         for view in stackView.arrangedSubviews { view.layer.borderWidth = 0 }
         activeWebView = webView
         webView.layer.borderWidth = 3
+        updateUI(for: webView)
     }
+    
+    
+    func updateUI(for webView: WKWebView) { title = webView.title; addressBar.text = webView.url?.absoluteString ?? "" }
     
     //-------------------------------------//
     // MARK: - TEXTFIELD DELEGATE METHODS
