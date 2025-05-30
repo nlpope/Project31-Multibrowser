@@ -73,7 +73,6 @@ class MBLogoLauncher
         isFirstVisit = false
         removeAllAVPlayerLayers()
         targetVC.navigationController?.isNavigationBarHidden = false
-        // HOMEVC load func on finish
     }
     
     

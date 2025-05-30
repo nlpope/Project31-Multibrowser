@@ -18,9 +18,19 @@ class HomeVC: UIViewController, WKNavigationDelegate, UITextFieldDelegate, UIGes
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        addWebView()
-        setDefaultTitle()
-        configNavigation()
+        logoLauncher = MBLogoLauncher(targetVC: self)
+        logoLauncher.configLogoLauncher()
+        
+//        addWebView()
+//        setDefaultTitle()
+//        configNavigation()
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        logoLauncher = MBLogoLauncher(targetVC: self)
+        if PersistenceManager.retrieveFirstVisitStatus() { logoLauncher.configLogoLauncher() }
+        logoLauncher.configLogoLauncher()
     }
     
     
