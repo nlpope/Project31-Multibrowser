@@ -35,7 +35,6 @@ class MBLogoLauncher
         player = AVPlayer.init(url: url)
         playerLayer = AVPlayerLayer(player: player)
         playerLayer?.videoGravity = AVLayerVideoGravity.resizeAspect
-//        playerLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
         playerLayer?.frame = targetVC.view.layer.frame
         playerLayer?.name = VideoKeys.playerLayerName
         player?.actionAtItemEnd = AVPlayer.ActionAtItemEnd.none

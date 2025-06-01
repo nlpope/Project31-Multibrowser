@@ -31,7 +31,7 @@ class HomeVC: UIViewController, WKNavigationDelegate, UITextFieldDelegate, UIGes
     //-------------------------------------//
     // MARK: - NAVIGATION SETUP
     
-    func setDefaultTitle() { title = "Multibrowser" }
+    func setDefaultTitle() { title = "Search anything using multiple browsers at once" }
     
     
     func configNavigation()
