@@ -35,6 +35,7 @@ class MBLogoLauncher
         player = AVPlayer.init(url: url)
         playerLayer = AVPlayerLayer(player: player)
         playerLayer?.videoGravity = AVLayerVideoGravity.resizeAspect
+//        playerLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
         playerLayer?.frame = targetVC.view.layer.frame
         playerLayer?.name = VideoKeys.playerLayerName
         player?.actionAtItemEnd = AVPlayer.ActionAtItemEnd.none
@@ -56,6 +57,8 @@ class MBLogoLauncher
     func maskHomeVCForIntro()
     {
         targetVC.navigationController?.isNavigationBarHidden = true
+        targetVC.addressBar.isHidden = true
+        targetVC.view.backgroundColor = .black
     }
     
     
@@ -70,9 +73,16 @@ class MBLogoLauncher
     
     @objc func playerDidFinishPlaying()
     {
+        targetVC.navigationController?.isNavigationBarHidden = false
+        targetVC.addressBar.isHidden = false
+        targetVC.view.backgroundColor = .systemBackground
+        
         isFirstVisit = false
         removeAllAVPlayerLayers()
-        targetVC.navigationController?.isNavigationBarHidden = false
+        
+        targetVC.addWebView()
+        targetVC.setDefaultTitle()
+        targetVC.configNavigation()
     }
     
     

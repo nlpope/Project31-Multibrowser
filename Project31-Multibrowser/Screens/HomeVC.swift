@@ -15,26 +15,18 @@ class HomeVC: UIViewController, WKNavigationDelegate, UITextFieldDelegate, UIGes
     var player = AVPlayer()
     weak var activeWebView: WKWebView?
     
-    override func viewDidLoad()
-    {
-        super.viewDidLoad()
-        logoLauncher = MBLogoLauncher(targetVC: self)
-        logoLauncher.configLogoLauncher()
-        
-//        addWebView()
-//        setDefaultTitle()
-//        configNavigation()
-    }
-    
-    
-    override func viewWillAppear(_ animated: Bool) {
-        logoLauncher = MBLogoLauncher(targetVC: self)
-        if PersistenceManager.retrieveFirstVisitStatus() { logoLauncher.configLogoLauncher() }
-        logoLauncher.configLogoLauncher()
-    }
+    override func viewDidLoad() { super.viewDidLoad(); playIntro() }
     
     
     deinit { logoLauncher.removeAllAVPlayerLayers() }
+    
+    
+    func playIntro()
+    {
+        PersistenceManager.isFirstVisitStatus = true
+        logoLauncher = MBLogoLauncher(targetVC: self)
+        if PersistenceManager.retrieveFirstVisitStatus() { logoLauncher.configLogoLauncher() }
+    }
     
     //-------------------------------------//
     // MARK: - NAVIGATION SETUP
