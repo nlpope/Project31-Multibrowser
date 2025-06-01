@@ -15,6 +15,7 @@ class HomeVC: UIViewController, WKNavigationDelegate, UITextFieldDelegate, UIGes
     var player = AVPlayer()
     weak var activeWebView: WKWebView?
     
+    
     override func viewDidLoad() { super.viewDidLoad(); playIntro() }
     
     

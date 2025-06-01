@@ -7,7 +7,6 @@ import Foundation
 enum PersistenceManager
 {
     static private let defaults = UserDefaults.standard
-
     static var isFirstVisitStatus: Bool! = true {
         didSet { print("didset accessed in pers mgr"); PersistenceManager.save(firstVisitStatus: self.isFirstVisitStatus) }
     }

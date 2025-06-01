@@ -21,6 +21,7 @@ class MBLogoLauncher
         didSet { PersistenceManager.save(firstVisitStatus: isFirstVisit) }
     }
     
+    
     init(targetVC: UIViewController) { self.targetVC = targetVC as? HomeVC }
     
     
