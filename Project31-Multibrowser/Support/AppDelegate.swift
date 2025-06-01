@@ -99,6 +99,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
  tableViews. Not sure why 'override'  isn't present but its triggered automatically.
  > same goes for this: func textFieldShouldReturn(_ textField: UITextField) -> Bool. It comes from the UITextFieldDelegate
  
+ * logo launcher not working properly - I don't think I'm setting the persistence mgr's isFirstVisit prop back to true
+ ... & that's why it's not (?)
  --------------------------
  TECHNOLOGIES USED / LEARNED:
  * Swift
