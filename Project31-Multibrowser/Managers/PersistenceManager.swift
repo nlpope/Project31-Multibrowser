@@ -31,8 +31,8 @@ enum PersistenceManager
         
         do {
             let decoder = JSONDecoder()
-            let savedStatus = try decoder.decode(Bool.self, from: visitStatusData)
-            return savedStatus
+            let loadedStatus = try decoder.decode(Bool.self, from: visitStatusData)
+            return loadedStatus
         } catch {
             print("unable to load first visit status")
             return true
